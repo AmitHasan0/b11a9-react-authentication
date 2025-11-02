@@ -1,5 +1,5 @@
 import React from "react";
-
+import icon from "../assets/logo.png";
 const Header = () => {
   return (
     <div className="navbar bg-base-100 shadow-sm">
@@ -45,7 +45,10 @@ const Header = () => {
             </li>
           </ul>
         </div>
-        <a className="btn btn-ghost text-xl">AppStore</a>
+        <a className="btn btn-ghost text-xl">
+          <img src={icon} alt="" />
+          AppStore
+        </a>
       </div>
       <div className="navbar-center hidden lg:flex">
         <ul className="menu menu-horizontal px-1">
