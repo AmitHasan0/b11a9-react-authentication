@@ -5,12 +5,19 @@ const AppCard = ({ app }) => {
   console.log(thumbnail);
   //   console.log(app);
   return (
-    <div className="flex gap-5">
-      <img className="w-20" src={thumbnail} alt="" />
-      <div>
-        <h3>{name}</h3>
+    <div className="">
+      <img
+        className="w-16 h-16 rounded-md object-cover"
+        src={thumbnail}
+        alt={name}
+      />
+
+      <div className="">
+        <h2 className="">{name}</h2>
         <p>{downloads}</p>
-        <p>{rating}</p>
+        <div className="">
+          <p>{rating}</p>
+        </div>
       </div>
     </div>
   );
