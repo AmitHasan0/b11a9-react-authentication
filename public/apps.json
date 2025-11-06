@@ -1,0 +1,361 @@
+[
+  {
+    "id": "app001",
+    "name": "Programming Hero",
+    "developer": "Programming Hero Ltd.",
+    "thumbnail": "https://i.ibb.co.com/VpBywWpg/programminghero-logo.jpg",
+    "banner": "https://i.ibb.co/vj5rT68/programming-hero-banner.jpg",
+    "downloads": 3500000,
+    "category": "Education",
+    "rating": 4.8,
+    "description": "Programming Hero is a fun and interactive way to learn programming. Whether you're a beginner or looking to brush up your skills, this app makes learning to code exciting and practical.",
+    "features": [
+      "Interactive coding lessons",
+      "Real-world projects",
+      "Gamified learning experience"
+    ],
+    "reviews": [
+      {
+        "user": "coder_nadia",
+        "rating": 5,
+        "comment": "Best app for beginners! The lessons are super easy to follow and engaging."
+      }
+    ]
+  },
+  {
+    "id": "app002",
+    "name": "TaskMaster Pro",
+    "developer": "Zen Productivity Inc.",
+    "thumbnail": "https://i.ibb.co.com/W4V9j5V8/download.jpg",
+    "downloads": 1200000,
+    "category": "Productivity",
+    "rating": 4.6,
+    "description": "TaskMaster Pro helps you organize your day, track your goals, and boost productivity with AI-based reminders and streaks.",
+    "features": [
+      "Smart daily planner",
+      "Cross-device sync",
+      "Goal tracking with streaks"
+    ],
+    "reviews": [
+      {
+        "user": "efficiency_guru",
+        "rating": 5,
+        "comment": "Super clean UI and very helpful reminders!"
+      }
+    ]
+  },
+  {
+    "id": "app003",
+    "name": "Mindly Focus",
+    "developer": "Calmify Studios",
+    "thumbnail": "https://i.ibb.co.com/fzMqPrMP/download.png",
+    "banner": "https://i.postimg.cc/2SL3kvkx/download.png",
+    "downloads": 800000,
+    "category": "Productivity",
+    "rating": 4.5,
+    "description": "Mindly Focus helps you stay mindful and focused through guided meditation sessions and background soundscapes.",
+    "features": ["Focus timer", "Ambient sounds", "Daily meditation goals"],
+    "reviews": [
+      {
+        "user": "relax_rina",
+        "rating": 4,
+        "comment": "Nice minimalist design, perfect for focus sessions."
+      }
+    ]
+  },
+  {
+    "id": "app004",
+    "name": "MathGenie",
+    "developer": "EduLab Technologies",
+    "banner": "https://i.ibb.co/2czm9qL/mathgenie-banner.jpg",
+    "thumbnail": "https://i.ibb.co.com/wFg1wZHK/download-1.png",
+    "downloads": 1500000,
+    "category": "Education",
+    "rating": 4.7,
+    "description": "MathGenie makes math learning fun with puzzles, quizzes, and step-by-step explanations for all grade levels.",
+    "features": [
+      "AI-powered math solver",
+      "Interactive quizzes",
+      "Leaderboard challenges"
+    ],
+    "reviews": [
+      {
+        "user": "mathlover92",
+        "rating": 5,
+        "comment": "My kids actually enjoy solving math problems now!"
+      }
+    ]
+  },
+  {
+    "id": "app005",
+    "name": "Galaxy Racer X",
+    "developer": "Stellar Games Studio",
+    "thumbnail": "https://i.ibb.co.com/Z3XPn9M/game.jpg",
+    "banner": "https://i.ibb.co/6gckb45/galaxy-racer-banner.jpg",
+    "downloads": 2500000,
+    "category": "Gaming",
+    "rating": 4.9,
+    "description": "Experience high-speed racing through galaxies! Customize your spaceship, compete in tournaments, and conquer the universe.",
+    "features": [
+      "Online multiplayer mode",
+      "Customizable spaceships",
+      "Dynamic space environments"
+    ],
+    "reviews": [
+      {
+        "user": "astro_driver",
+        "rating": 5,
+        "comment": "Best space racing game ever! Stunning visuals and fast gameplay."
+      }
+    ]
+  },
+  {
+    "id": "app006",
+    "name": "WordQuest Adventure",
+    "developer": "PuzzleCraft Games",
+    "thumbnail": "https://i.ibb.co.com/yFtKyxrj/download-2.jpg",
+    "banner": "https://i.ibb.co/kMG0rvK/wordquest-banner.jpg",
+    "downloads": 900000,
+    "category": "Gaming",
+    "rating": 4.4,
+    "description": "Solve word puzzles, travel through magical worlds, and challenge your brain with hundreds of creative levels.",
+    "features": [
+      "Daily word challenges",
+      "Offline mode",
+      "Leaderboard & friend competition"
+    ],
+    "reviews": [
+      {
+        "user": "wordlover",
+        "rating": 4,
+        "comment": "Very addictive and relaxing word game!"
+      }
+    ]
+  },
+  {
+    "id": "app007",
+    "name": "LangBoost",
+    "developer": "LingoTech",
+    "thumbnail": "https://i.ibb.co.com/TDm25Qzf/images.png",
+    "banner": "https://i.ibb.co/vYB1t0m/langboost-banner.jpg",
+    "downloads": 1100000,
+    "category": "Education",
+    "rating": 4.6,
+    "description": "Learn new languages easily with LangBoost — featuring interactive speaking practice, flashcards, and daily lessons.",
+    "features": [
+      "Voice recognition speaking test",
+      "Flashcard review mode",
+      "Progress tracking"
+    ],
+    "reviews": [
+      {
+        "user": "traveler_tom",
+        "rating": 5,
+        "comment": "I learned Spanish in 2 months! Great practice features."
+      }
+    ]
+  },
+  {
+    "id": "app008",
+    "name": "FocusNote",
+    "developer": "Clarity Apps",
+    "thumbnail": "https://i.ibb.co.com/bn4yRB3/download-2.png",
+    "banner": "https://i.ibb.co/8N1vhLV/focusnote-banner.jpg",
+    "downloads": 600000,
+    "category": "Productivity",
+    "rating": 4.3,
+    "description": "FocusNote combines minimalist note-taking with task reminders. Perfect for students and professionals who like simplicity.",
+    "features": [
+      "Markdown note support",
+      "To-do list integration",
+      "Cloud backup"
+    ],
+    "reviews": [
+      {
+        "user": "note_addict",
+        "rating": 4,
+        "comment": "Simple and efficient — I love the distraction-free design!"
+      }
+    ]
+  },
+  {
+    "id": "app009",
+    "name": "CodeSprint",
+    "developer": "DevBoost Labs",
+    "thumbnail": "https://i.ibb.co.com/KcMWcZBG/download-3.png",
+    "banner": "https://i.ibb.co/4mxK5xk/codesprint-banner.jpg",
+    "downloads": 1800000,
+    "category": "Education",
+    "rating": 4.7,
+    "description": "Sharpen your coding skills with daily challenges, interactive problems, and competitive leaderboards.",
+    "features": [
+      "Daily coding puzzles",
+      "Leaderboard & contests",
+      "Instant feedback and hints"
+    ],
+    "reviews": [
+      {
+        "user": "fast_coder",
+        "rating": 5,
+        "comment": "Love the challenges — it keeps me sharp every day!"
+      }
+    ]
+  },
+  {
+    "id": "app010",
+    "name": "HabitForge",
+    "developer": "FocusLab",
+    "thumbnail": "https://i.ibb.co.com/Gf4Wtz6K/download-3.jpg",
+    "banner": "https://i.ibb.co/Y8NwKHx/habitforge-banner.jpg",
+    "downloads": 2100000,
+    "category": "Productivity",
+    "rating": 4.8,
+    "description": "Build positive habits and track your progress with streaks, reminders, and habit communities.",
+    "features": [
+      "Visual habit tracker",
+      "Motivational streak system",
+      "Progress reports"
+    ],
+    "reviews": [
+      {
+        "user": "daily_dreamer",
+        "rating": 5,
+        "comment": "Simple, clean, and helps me stay consistent every day!"
+      }
+    ]
+  },
+  {
+    "id": "app011",
+    "name": "QuizVerse",
+    "developer": "EduQuest Studios",
+    "thumbnail": "https://i.ibb.co.com/Myhq4Hy5/download-4.jpg",
+    "banner": "https://i.ibb.co/6mQ3hMt/quizverse-banner.jpg",
+    "downloads": 950000,
+    "category": "Education",
+    "rating": 4.4,
+    "description": "Challenge your knowledge across thousands of topics with interactive quizzes and multiplayer battles.",
+    "features": [
+      "Topic-based quizzes",
+      "Live multiplayer mode",
+      "Reward badges"
+    ],
+    "reviews": [
+      {
+        "user": "quizlover99",
+        "rating": 4,
+        "comment": "Really fun! Competing with friends is my favorite part."
+      }
+    ]
+  },
+  {
+    "id": "app012",
+    "name": "PixelRaiders",
+    "developer": "NovaPlay Studios",
+    "thumbnail": "https://i.ibb.co.com/JjQm0JtH/download-5.jpg",
+    "banner": "https://i.ibb.co/tYRJXf1/pixelraiders-banner.jpg",
+    "downloads": 3200000,
+    "category": "Gaming",
+    "rating": 4.9,
+    "description": "Classic pixel-style adventure where you raid dungeons, collect loot, and defeat epic bosses.",
+    "features": [
+      "Retro 8-bit visuals",
+      "Multiplayer raids",
+      "Upgradeable weapons"
+    ],
+    "reviews": [
+      {
+        "user": "retro_gamer",
+        "rating": 5,
+        "comment": "Pure nostalgia! Addictive gameplay and great art style."
+      }
+    ]
+  },
+  {
+    "id": "app013",
+    "name": "FlowNotes",
+    "developer": "MinimalLab",
+    "thumbnail": "https://i.ibb.co.com/Zp3m5Lvx/download-4.png",
+    "banner": "https://i.ibb.co/t8jDdff/flownotes-banner.jpg",
+    "downloads": 400000,
+    "category": "Productivity",
+    "rating": 4.3,
+    "description": "Capture your thoughts effortlessly with FlowNotes — a minimal note-taking app for creative minds.",
+    "features": [
+      "Clean distraction-free editor",
+      "Auto sync with cloud",
+      "Tag-based organization"
+    ],
+    "reviews": [
+      {
+        "user": "writer_jane",
+        "rating": 4,
+        "comment": "The design is so calming. Perfect for journaling ideas."
+      }
+    ]
+  },
+  {
+    "id": "app014",
+    "name": "BrainWave Trainer",
+    "developer": "NeuroLabs",
+    "thumbnail": "https://i.ibb.co.com/gL94v0z4/download-6.jpg",
+    "banner": "https://i.ibb.co/BZQyB6G/brainwave-banner.jpg",
+    "downloads": 700000,
+    "category": "Education",
+    "rating": 4.5,
+    "description": "Boost your memory and cognitive speed with fun science-backed brain games and exercises.",
+    "features": [
+      "Daily brain workouts",
+      "Memory & focus challenges",
+      "Performance tracking"
+    ],
+    "reviews": [
+      {
+        "user": "smart_mind",
+        "rating": 5,
+        "comment": "The games are surprisingly effective — I feel more focused!"
+      }
+    ]
+  },
+  {
+    "id": "app015",
+    "name": "SkyArena Online",
+    "developer": "BlueNova Games",
+    "thumbnail": "https://i.ibb.co.com/3m13sKkW/download-7.jpg",
+    "banner": "https://i.ibb.co/X3tmyYH/skyarena-banner.jpg",
+    "downloads": 5000000,
+    "category": "Gaming",
+    "rating": 4.8,
+    "description": "Epic aerial battles await! Team up or fight solo in intense online sky combat tournaments.",
+    "features": [
+      "PvP online battles",
+      "Real-time voice chat",
+      "Ship customization"
+    ],
+    "reviews": [
+      {
+        "user": "pilot_pro",
+        "rating": 5,
+        "comment": "Incredible graphics and smooth controls — best online dogfight game!"
+      }
+    ]
+  },
+  {
+    "id": "app016",
+    "name": "StudySync",
+    "developer": "SmartEdu Inc.",
+    "thumbnail": "https://i.ibb.co.com/tT9rSMr5/download-5.png",
+    "banner": "https://i.ibb.co/v1VJ1yZ/studysync-banner.jpg",
+    "downloads": 2000000,
+    "category": "Education",
+    "rating": 4.7,
+    "description": "Collaborate and study smarter with synced notes, flashcards, and real-time group sessions.",
+    "features": ["Group study rooms", "AI-powered flashcards", "Offline sync"],
+    "reviews": [
+      {
+        "user": "student_rahul",
+        "rating": 5,
+        "comment": "Fantastic app for group studies! Makes revising so easy."
+      }
+    ]
+  }
+]

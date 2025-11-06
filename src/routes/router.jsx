@@ -1,12 +1,20 @@
 import { createBrowserRouter } from "react-router";
-import HomeLayout from "../layout/HomeLayout";
+
 import Home from "../pages/Home";
+import Profile from "../pages/Profile";
+import Categories from "../pages/Categories";
+import HomeLayout from "../layout/HomeLayout";
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <HomeLayout></HomeLayout>,
-    children: [{ path: "", element: <Home></Home> }, { path: "/apps" }],
+    loader: () => fetch("/apps.json"),
+    children: [
+      { path: "", element: <Home></Home> },
+      { path: "/profile", element: <Profile></Profile> },
+      { path: "/categories", element: <Categories></Categories> },
+    ],
   },
 ]);
 

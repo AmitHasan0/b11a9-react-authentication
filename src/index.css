@@ -16,6 +16,6 @@
   font-family: "Inter", sans-serif;
 }
 
-a.active:hover {
-  color: black;
+a.active {
+  @apply text-primary;
 }
