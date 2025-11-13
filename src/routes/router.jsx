@@ -4,6 +4,7 @@ import Home from "../pages/Home";
 import Profile from "../pages/Profile";
 import Categories from "../pages/Categories";
 import HomeLayout from "../layout/HomeLayout";
+import ErrorPage from "../pages/ErrorPage";
 
 const router = createBrowserRouter([
   {
@@ -15,6 +16,10 @@ const router = createBrowserRouter([
       { path: "/profile", element: <Profile></Profile> },
       { path: "/categories", element: <Categories></Categories> },
     ],
+  },
+  {
+    path: "/*",
+    element: <ErrorPage></ErrorPage>,
   },
 ]);
 
