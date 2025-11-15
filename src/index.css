@@ -20,3 +20,24 @@ a.active {
   @apply relative transition-all duration-300 
           text-blue-600 border-b-2 border-blue-600;
 }
+
+a {
+  @apply hover:text-primary transition-colors ease-in-out duration-200 cursor-pointer;
+}
+
+.carousel-style {
+  @apply carousel-item flex justify-center lg:w-5/22 w-12/14 ml-6 lg:mx-2;
+}
+
+.heading-style {
+  @apply text-xl flex justify-center items-center
+            lg:text-3xl font-extrabold text-gray-800 
+            transition-colors duration-300 ease-out 
+            group-hover:text-blue-600;
+}
+
+.heading-underline {
+  @apply h-1 w-0 bg-linear-to-r from-blue-500 to-blue-300  
+            mt-1 rounded-full transition-all duration-500 ease-in-out 
+            group-hover:w-full shadow-2xl;
+}

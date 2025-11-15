@@ -16,7 +16,7 @@ const AppCard = ({ app }) => {
         hover:shadow-xl
         hover:border-black
         transition-all duration-300 ease-out
-        p-5 mx-6 
+        lg:p-5 p-6
         transform hover:scale-105 hover:-translate-y-2
       "
     >
@@ -24,7 +24,7 @@ const AppCard = ({ app }) => {
         className="
           border border-blue-200
           hover:border-blue-700
-          rounded-2xl p-6 
+          rounded-2xl lg:p-6 p-8
           shadow-inner 
           bg-linear-to-b from-white to-blue-100
           group-hover:from-blue-50 group-hover:to-blue-200
@@ -34,7 +34,7 @@ const AppCard = ({ app }) => {
       >
         <img
           className="
-            w-14 h-14 lg:w-20 lg:h-20
+            w-12 h-12 lg:w-20 lg:h-20
             object-cover rounded-2xl 
             border border-blue-300 
             shadow-lg
@@ -52,7 +52,7 @@ const AppCard = ({ app }) => {
               font-bold text-gray-800
               group-hover:text-blue-800
               transition-all duration-200
-              truncate w-28 lg:w-36 text-center
+              truncate w-50 lg:w-36 text-center
             "
           >
             {name}
