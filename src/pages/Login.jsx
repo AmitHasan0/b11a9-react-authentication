@@ -1,10 +1,10 @@
-import React, { use, useState } from "react";
+import React, { use, useEffect, useState } from "react";
 import { Link, useLocation, useNavigate } from "react-router";
 import { AuthContext } from "../provider/AuthProvider";
 import Swal from "sweetalert2";
 
 const Login = () => {
-  const { signIn, setUser } = use(AuthContext);
+  const { signIn, setUser, googleSignIn } = use(AuthContext);
   const [error, setError] = useState("");
   const location = useLocation();
   const navigate = useNavigate();
@@ -31,6 +31,22 @@ const Login = () => {
       .catch((error) => {
         const errorMessage = error.message;
         const errorCode = error.code;
+        setError(errorCode, errorMessage);
+      });
+  };
+  useEffect(() => {
+    document.title = "Login | App Store";
+  }, []);
+  const handleGoogleSignIn = () => {
+    googleSignIn()
+      .then((res) => {
+        const user = res.user;
+        setUser(user);
+        navigate("/");
+      })
+      .catch((error) => {
+        const errorCode = error.code;
+        const errorMessage = error.message;
         setError(errorCode, errorMessage);
       });
   };
@@ -70,7 +86,10 @@ const Login = () => {
             >
               Login
             </button>
-            <button class="btn bg-white text-black btn-neutral">
+            <button
+              onClick={handleGoogleSignIn}
+              class="btn bg-white text-black btn-neutral"
+            >
               <svg
                 aria-label="Google logo"
                 width="22"

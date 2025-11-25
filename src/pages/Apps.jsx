@@ -1,10 +1,12 @@
-import React from "react";
+import React, { useEffect } from "react";
 import AppCard from "../components/AppCard";
 import { useLoaderData } from "react-router";
 
 const Apps = () => {
   const apps = useLoaderData();
-  console.log(apps);
+  useEffect(() => {
+    document.title = "Apps | App Store";
+  }, []);
   return (
     <div>
       <h2 className="font-bold text-4xl text-center  my-10">

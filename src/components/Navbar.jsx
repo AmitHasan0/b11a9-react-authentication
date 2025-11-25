@@ -3,7 +3,7 @@ import logo from "../assets/logo.png";
 import { Link, NavLink } from "react-router";
 import { AuthContext } from "../provider/AuthProvider";
 import Swal from "sweetalert2";
-
+import guest from "../assets/userIcon.png";
 const Navbar = () => {
   const { user, logOut } = use(AuthContext);
   const handleLogOut = () => {
@@ -19,7 +19,7 @@ const Navbar = () => {
         });
       })
       .catch((error) => {
-        console.log(error);
+        // console.log(error);
       });
   };
   return (
@@ -52,6 +52,24 @@ const Navbar = () => {
 
       {/* Right: Login Button */}
       <div className="navbar-end">
+        <div className="relative group cursor-pointer">
+          <img
+            className="mr-2 w-12 h-12 rounded-full"
+            src={user ? user.photoURL : guest}
+            alt="avatar"
+          />
+
+          {/* Tooltip */}
+          <span
+            className="absolute top-8  mt-2 px-2 py-1 
+               bg-gray-800 text-white text-xs whitespace-nowrap rounded-full
+               opacity-0 group-hover:opacity-50
+               transition-all duration-200"
+          >
+            {user ? user.displayName : "Guest"}
+          </span>
+        </div>
+
         {user ? (
           <button
             onClick={handleLogOut}

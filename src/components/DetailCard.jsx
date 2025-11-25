@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { GoStarFill } from "react-icons/go";
 import { RxStar } from "react-icons/rx";
 
@@ -30,6 +30,9 @@ const DetailCard = ({ allApp }) => {
       setInstalled(false);
     }
   };
+  useEffect(() => {
+    document.title = "App Details | App Store";
+  }, []);
 
   const handleSubmit = () => {
     if (!reviewText || !reviewRating) {
@@ -69,9 +72,7 @@ const DetailCard = ({ allApp }) => {
           <p className="text-gray-400">{developer}</p>
           <p className="text-sm sm:text-base">Category: {category}</p>
           <p className="text-sm sm:text-base">Downloads: {downloads}</p>
-          <p className="text-sm sm:text-base flex items-center gap-1">
-            Rating: {rating} <GoStarFill color="gold"></GoStarFill>
-          </p>
+          <p className="text-sm sm:text-base gap-1">Rating: {rating}⭐</p>
         </div>
 
         <button

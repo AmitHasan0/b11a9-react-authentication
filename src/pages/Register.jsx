@@ -1,10 +1,10 @@
-import React, { use, useState } from "react";
+import React, { use, useEffect, useState } from "react";
 import { Link, useNavigate } from "react-router";
 import { AuthContext } from "../provider/AuthProvider";
 import Swal from "sweetalert2";
 
 const Register = () => {
-  const { createUser, setUser } = use(AuthContext);
+  const { createUser, setUser, updateUser, googleSignIn } = use(AuthContext);
   const navigate = useNavigate();
   const [error, setError] = useState("");
   const [passwordError, setPasswordError] = useState("");
@@ -38,7 +38,13 @@ const Register = () => {
     createUser(email, password)
       .then((res) => {
         const user = res.user;
-        setUser(user);
+        updateUser({ displayName: name, photoURL: photo })
+          .then(() => {
+            setUser({ ...user, displayName: name, photoURL: photo });
+          })
+          .catch((error) => {
+            setUser(user);
+          });
 
         Swal.fire({
           icon: "success",
@@ -53,6 +59,22 @@ const Register = () => {
       .catch((error) => {
         const errorMessage = error.message;
         setError(errorMessage);
+      });
+  };
+  useEffect(() => {
+    document.title = "Register | App Store";
+  }, []);
+  const handleGoogleSignIn = () => {
+    googleSignIn()
+      .then((res) => {
+        const user = res.user;
+        setUser(user);
+        navigate("/");
+      })
+      .catch((error) => {
+        const errorCode = error.code;
+        const errorMessage = error.message;
+        setError(errorCode, errorMessage);
       });
   };
 
@@ -111,7 +133,10 @@ const Register = () => {
             >
               Register
             </button>
-            <button class="btn bg-white text-black btn-neutral">
+            <button
+              onClick={handleGoogleSignIn}
+              class="btn bg-white text-black btn-neutral"
+            >
               <svg
                 aria-label="Google logo"
                 width="22"

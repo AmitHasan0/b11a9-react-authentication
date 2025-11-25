@@ -1,9 +1,14 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
-import { Outlet } from "react-router";
+import { Outlet, useNavigation } from "react-router";
+import Loading from "../pages/Loading";
 
 const HomeLayout = () => {
+  useEffect(() => {
+    document.title = "App Store";
+  }, []);
+  const { state } = useNavigation();
   return (
     <div className="w-11/12 mx-auto">
       {/* Navbar */}
@@ -12,7 +17,9 @@ const HomeLayout = () => {
       </nav>
       {/* Header */}
 
-      <Outlet></Outlet>
+      <section>
+        {state == "loading" ? <Loading></Loading> : <Outlet></Outlet>}
+      </section>
 
       <footer>
         <Footer></Footer>

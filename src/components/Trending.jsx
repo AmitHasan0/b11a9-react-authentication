@@ -4,7 +4,6 @@ import AppCard from "./AppCard";
 
 const Trending = () => {
   const apps = useLoaderData();
-  console.log(apps);
   return (
     <div className="carousel w-full lg:py-10 py-4 bg-blue-100 lg:rounded-xl rounded-3xl">
       {apps

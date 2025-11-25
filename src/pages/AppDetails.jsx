@@ -6,7 +6,6 @@ const AppDetails = () => {
   const apps = useLoaderData();
   const [allApp, setAllApp] = useState({});
   const { id } = useParams();
-  console.log(id);
   useEffect(() => {
     const appDetails = apps.find((app) => app.id == id);
     setAllApp(appDetails);

@@ -12,18 +12,26 @@ import Register from "../pages/Register";
 import AppDetails from "../pages/AppDetails";
 import Apps from "../pages/Apps";
 import PrivateRoute from "../provider/PrivateRoute";
+import Loading from "../pages/Loading";
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <HomeLayout></HomeLayout>,
     loader: () => fetch("/apps.json"),
+    hydrateFallbackElement: <Loading></Loading>,
     children: [
-      { path: "", loader: () => fetch("/apps.json"), element: <Home></Home> },
+      {
+        path: "",
+        loader: () => fetch("/apps.json"),
+        hydrateFallbackElement: <Loading></Loading>,
+        element: <Home></Home>,
+      },
       { path: "/profile", element: <Profile></Profile> },
       {
         path: "/appDetails/:id",
         loader: () => fetch("/apps.json"),
+        hydrateFallbackElement: <Loading></Loading>,
         element: (
           <PrivateRoute>
             <AppDetails></AppDetails>
@@ -33,6 +41,7 @@ const router = createBrowserRouter([
       {
         path: "/categories/allApps",
         loader: () => fetch("/apps.json"),
+        hydrateFallbackElement: <Loading></Loading>,
         element: <Apps></Apps>,
       },
     ],
