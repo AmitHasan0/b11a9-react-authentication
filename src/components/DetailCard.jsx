@@ -1,8 +1,10 @@
-import React, { useEffect, useState } from "react";
+import React, { use, useEffect, useState } from "react";
 import { GoStarFill } from "react-icons/go";
 import { RxStar } from "react-icons/rx";
+import { AuthContext } from "../provider/AuthProvider";
 
 const DetailCard = ({ allApp }) => {
+  const { user } = use(AuthContext);
   const {
     name,
     developer,
@@ -158,6 +160,7 @@ const DetailCard = ({ allApp }) => {
         ) : (
           reviews.map((r, i) => (
             <div key={i} className="p-3 mt-2 border rounded-lg bg-gray-50">
+              <h3 className="font-extrabold">{user.displayName}</h3>
               <p className="text-sm">{r.text}</p>
               <p className="font-bold text-sm">⭐ {r.rating}</p>
             </div>
