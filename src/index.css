@@ -22,7 +22,7 @@ a.active {
 }
 
 a {
-  @apply hover:text-primary transition-colors ease-in-out duration-200 cursor-pointer;
+  @apply transition-colors ease-in-out duration-200 cursor-pointer;
 }
 
 .carousel-style {

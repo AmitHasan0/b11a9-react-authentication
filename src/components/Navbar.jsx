@@ -1,19 +1,33 @@
-import React from "react";
+import React, { use } from "react";
 import logo from "../assets/logo.png";
-import { Link, NavLink, useNavigate } from "react-router";
+import { Link, NavLink } from "react-router";
+import { AuthContext } from "../provider/AuthProvider";
+import Swal from "sweetalert2";
 
 const Navbar = () => {
-  const navigate = useNavigate();
-  const handleClick = () => {
-    navigate("/");
+  const { user, logOut } = use(AuthContext);
+  const handleLogOut = () => {
+    logOut()
+      .then(() => {
+        Swal.fire({
+          icon: "error",
+          title: "Logged Out Successfully!",
+          timer: 1500,
+          showConfirmButton: false,
+        }).then(() => {
+          navigate("/");
+        });
+      })
+      .catch((error) => {
+        console.log(error);
+      });
   };
-
   return (
     <div className="navbar bg-white shadow-sm px-4">
       {/* Left: Logo */}
-      <div
-        onClick={handleClick}
-        className="navbar-start cursor-pointer flex items-center gap-2 group"
+      <Link
+        to="/"
+        className="navbar-start cursor-pointer items-center gap-2 group"
       >
         <img
           className="lg:w-10 w-8 duration-200 group-hover:scale-110"
@@ -23,30 +37,36 @@ const Navbar = () => {
         <h1 className="lg:text-2xl text-xl font-extrabold text-primary">
           <span className="text-secondary">App</span>Store
         </h1>
-      </div>
+      </Link>
 
       {/* Center: Nav Items */}
       <div className="navbar-center hidden lg:flex gap-10 text-gray-500 font-medium">
-        <NavLink to="/categories">
-          <span>Categories</span>
+        <NavLink to="/categories/allApps">
+          <span className="hover:text-blue-600">Apps</span>
         </NavLink>
 
         <NavLink to="/profile">
-          <span>Profile</span>
+          <span className="hover:text-blue-600">Profile</span>
         </NavLink>
       </div>
 
       {/* Right: Login Button */}
       <div className="navbar-end">
-        <Link
-          className="
-            btn bg-blue-600 border-none text-white 
-            hover:bg-blue-800 transition-all duration-300
-            rounded-full px-6
-          "
-        >
-          Login
-        </Link>
+        {user ? (
+          <button
+            onClick={handleLogOut}
+            className="btn btn-primary hover:bg-blue-800 px-6 rounded-lg"
+          >
+            LogOut
+          </button>
+        ) : (
+          <Link
+            to="/auth/login"
+            className="btn btn-primary hover:bg-blue-800 px-6 rounded-lg"
+          >
+            LogIn
+          </Link>
+        )}
       </div>
     </div>
   );

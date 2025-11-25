@@ -1,12 +1,14 @@
 import React from "react";
 import { RxStarFilled } from "react-icons/rx";
+import { Link } from "react-router";
 
 const AppCard = ({ app }) => {
-  const { name, thumbnail, downloads, rating } = app;
+  const { id, name, thumbnail, downloads, rating } = app;
 
   return (
-    <div
-      className="
+    <Link to={`/appDetails/${id}`}>
+      <div
+        className="
         group
         flex flex-col items-center justify-between
         rounded-3xl 
@@ -19,9 +21,9 @@ const AppCard = ({ app }) => {
         lg:p-5 p-6
         transform hover:scale-105 hover:-translate-y-2
       "
-    >
-      <div
-        className="
+      >
+        <div
+          className="
           border border-blue-200
           hover:border-blue-700
           rounded-2xl lg:p-6 p-8
@@ -31,9 +33,9 @@ const AppCard = ({ app }) => {
           transition-all duration-300
           w-full flex flex-col items-center
         "
-      >
-        <img
-          className="
+        >
+          <img
+            className="
             w-12 h-12 lg:w-20 lg:h-20
             object-cover rounded-2xl 
             border border-blue-300 
@@ -41,42 +43,43 @@ const AppCard = ({ app }) => {
             group-hover:shadow-blue-300
             transition-all duration-300
           "
-          src={thumbnail}
-          alt="app-logo"
-        />
+            src={thumbnail}
+            alt="app-logo"
+          />
 
-        <div className="flex flex-col items-center gap-2 mt-4">
-          <h2
-            className="
+          <div className="flex flex-col items-center gap-2 mt-4">
+            <h2
+              className="
               text-base lg:text-lg 
               font-bold text-gray-800
               group-hover:text-blue-800
               transition-all duration-200
               truncate w-50 lg:w-36 text-center
             "
-          >
-            {name}
-          </h2>
+            >
+              {name}
+            </h2>
 
-          <div className="flex items-center justify-center gap-1 text-sm text-gray-600">
-            <span className="font-semibold">{rating}</span>
-            <RxStarFilled
-              className="
+            <div className="flex items-center justify-center gap-1 text-sm text-gray-600">
+              <span className="font-semibold">{rating}</span>
+              <RxStarFilled
+                className="
                 text-yellow-400 
                 group-hover:text-yellow-500 
                 transition-all duration-200
               "
-              size={18}
-            />
-          </div>
+                size={18}
+              />
+            </div>
 
-          <p className="text-xs text-gray-600">
-            <span className="font-bold text-gray-700">Downloads:</span>{" "}
-            {downloads}
-          </p>
+            <p className="text-xs text-gray-600">
+              <span className="font-bold text-gray-700">Downloads:</span>{" "}
+              {downloads}
+            </p>
+          </div>
         </div>
       </div>
-    </div>
+    </Link>
   );
 };
 
